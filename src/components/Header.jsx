@@ -4,10 +4,10 @@ import CartModal from "./CartModal.jsx";
 import { CartContext } from "../store/shoppingCartContext.jsx";
 
 export default function Header() {
-  const { cart } = useContext(CartContext);
+  const { items } = useContext(CartContext);
   const modal = useRef();
 
-  const cartQuantity = cart.items.length;
+  const cartQuantity = items.length;
 
   function handleOpenCartClick() {
     modal.current.open();
